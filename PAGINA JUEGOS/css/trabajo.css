@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  background-image:
+        linear-gradient(
+            rgba(242, 242, 247, 0.85),
+            rgba(242, 242, 247, 0.85)
+        ),
+        url("https://imgs.search.brave.com/Ul5hf1S116IFfV1UTMaQrNNC1QDqYvjVyV8YKUof9SY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWF0ZXJpYWxlc2Nv/bGFyLmVzL2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDUvanVlZ29zLXJl/dW5pZG9zLmpwZw");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+  text-align: center;
+  color: black
+}
+
+nav{
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  flex: 1;
+}
+
+#contenidoprincipal {
+  align-items: center;
+  text-align: center;
+}
+
+footer{
+    background-image:
+        linear-gradient(
+            rgba(242, 242, 247, 0.85),
+            rgba(242, 242, 247, 0.85)
+        ),
+        url("https://imgs.search.brave.com/Ul5hf1S116IFfV1UTMaQrNNC1QDqYvjVyV8YKUof9SY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWF0ZXJpYWxlc2Nv/bGFyLmVzL2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDUvanVlZ29zLXJl/dW5pZG9zLmpwZw");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20px;
+}
+
+#adminDiv{
+  display:none
+}
+
+#logoutDiv{
+  display:none
+}
