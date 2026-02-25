@@ -1,2 +1,4 @@
-# Pagina-Juego-Reunidos
-Es un proyecto que hemos ido haciendo a lo largo del curso en la asignatura de JavaScript que trata sobre una pagina de juegos reunidos que como su nombre indica son todos los juegos reunidos que hemos  ido viendo y haciendo durante el curso 
+🎮 Proyecto: Juegos Reunidos
+
+Este proyecto es una recopilación de los trabajos realizados a lo largo del curso en la asignatura de JavaScript.
+Es una plataforma que reune los diferentes juegos y mecánicas que hemos ido desarrollando durante las clases.
