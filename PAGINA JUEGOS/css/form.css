@@ -1,63 +1,152 @@
-body {
-    background: #f2f2f785;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-image:
-        linear-gradient(
-            rgba(242, 242, 247, 0.85),
-            rgba(242, 242, 247, 0.85)
-        ),
-        url("https://imgs.search.brave.com/Ul5hf1S116IFfV1UTMaQrNNC1QDqYvjVyV8YKUof9SY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWF0ZXJpYWxlc2Nv/bGFyLmVzL2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDUvanVlZ29zLXJl/dW5pZG9zLmpwZw");
+:root {
+    --primary-color: #ff3c78;
+    --secondary-color: #00f2ff;
+    --dark-bg: #0f0c29;
+    --glass-bg: rgba(15, 12, 41, 0.85);
+}
 
+/* =========================
+   FONDO ANIMADO GAMER
+========================= */
+.login-bg {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('https://wallpaperaccess.com/full/462271.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    animation: bgMove 20s ease-in-out infinite alternate;
 }
 
-#login {
-    background: white;
-    padding: 25px 35px;
-    border-radius: 12px;
-    width: 330px;
+@keyframes bgMove {
+    from { background-position: center top; }
+    to { background-position: center bottom; }
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(10px);
 }
 
-label {
-    font-size: 14px;
-}
-
-input {
+/* =========================
+   TARJETA LOGIN (GLASS + NEÓN)
+========================= */
+.login-card {
+    background: var(--glass-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
     width: 100%;
-    padding: 10px;
-    margin: 8px 0 18px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-input:focus {
-    border-color: #4b7bec;
-}
-
-
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #4b7bec;
+    max-width: 420px;
     color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.6),
+        0 0 20px rgba(255, 60, 120, 0.4);
+    transition: 0.3s ease;
 }
 
-button:hover {
-    background: lch(53.23% 104.58 40 / 0.522);
+.login-card:hover {
+    box-shadow:
+        0 0 50px rgba(0,0,0,0.8),
+        0 0 25px var(--primary-color);
 }
+
+/* =========================
+   TEXTOS
+========================= */
+.login-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.login-card p,
+.login-card label,
+.login-card span {
+    color: white !important;
+}
+
+.text-muted {
+    color: #b0c4de !important;
+}
+
+/* =========================
+   INPUTS ESTILO GAMER
+========================= */
+.form-control {
+    background-color: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    color: white !important;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.form-control:focus {
+    background-color: rgba(255,255,255,0.12) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 15px var(--secondary-color) !important;
+    transform: scale(1.02);
+}
+
+/* =========================
+   BOTÓN GAMER NEÓN
+========================= */
+.btn-danger {
+    background: linear-gradient(45deg, var(--primary-color), #ff7b00) !important;
+    border: none !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 14px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+/* =========================
+   ENLACE REGISTRO
+========================= */
+#registrar {
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#registrar:hover {
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* =========================
+   DIVIDER BONITO
+========================= */
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    top: 50%;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
